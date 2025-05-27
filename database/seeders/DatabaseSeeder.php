@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -13,8 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        Category::create([
+            'name' => 'UMUM',
+        ]);
+
         $this->call([
-            CategorySeeder::class,
+//            CategorySeeder::class,
+            ProductSeeder::class,
         ]);
     }
 }
