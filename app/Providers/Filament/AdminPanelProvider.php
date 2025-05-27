@@ -3,8 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Pages\Login;
-use App\Http\Middleware\BrowserTimezone;
-use App\Http\Middleware\RequestTimezone;
+use Filament\FontProviders\LocalFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -30,6 +29,10 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(Login::class)
+            ->font(
+                'Inter',
+                provider: LocalFontProvider::class,
+            )
             ->colors([
                 'primary' => Color::Amber,
             ])

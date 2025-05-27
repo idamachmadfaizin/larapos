@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      inter-ui:
+        specifier: ^4.1.0
+        version: 4.1.0
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.0.0
@@ -551,6 +555,10 @@ packages:
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
+
+  inter-ui@4.1.0:
+    resolution: {integrity: sha512-lUJ5YLtpj7jWsrhTbN5w32MLOqISGFGOTMRNn+IGhLrbt67z5yvmBRoqpLCWLVlJ+l7kqnH6su4meEqvLMfAAA==}
+    engines: {node: '>=16.0.0'}
 
   is-fullwidth-code-point@3.0.0:
     resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
@@ -1211,6 +1219,8 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  inter-ui@4.1.0: {}
 
   is-fullwidth-code-point@3.0.0: {}
 
