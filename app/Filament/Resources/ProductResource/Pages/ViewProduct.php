@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ProductResource\Pages;
 
 use App\Filament\Resources\ProductResource;
+use App\Filament\Resources\ProductResource\RelationManagers\PriceUnitRelationManager;
 use App\Filament\Resources\ProductResource\Widgets\ProductStats;
 use App\Filament\Traits\RefreshThePage;
 use Filament\Actions;
@@ -58,10 +59,6 @@ class ViewProduct extends ViewRecord
             ->success()
             ->send();
 
-//        $this->refreshPage();
-        $this->refreshFormData([
-            'is_active',
-        ]);
         $this->refreshPage();
     }
 
@@ -71,20 +68,20 @@ class ViewProduct extends ViewRecord
             ProductStats::make(['product' => $this->record]),
         ];
     }
-//
-//    public function getRelationManagers(): array
-//    {
-//        $relations = [
+
+    public function getRelationManagers(): array
+    {
+        $relations = [
 //            SellingDetailsRelationManager::make(),
-//            PriceUnitsRelationManager::make(),
-//        ];
+            PriceUnitRelationManager::make(),
+        ];
 //        if (! $this->record->is_non_stock && Feature::active(ProductStock::class)) {
 //            return [
 //                StocksRelationManager::make(),
 //                ...$relations,
 //            ];
 //        }
-//
-//        return $relations;
-//    }
+
+        return $relations;
+    }
 }

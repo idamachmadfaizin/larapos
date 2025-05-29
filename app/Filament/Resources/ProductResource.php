@@ -3,12 +3,12 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProductResource\Pages;
-use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Filament\Infolists;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Support\Colors\Color;
@@ -18,7 +18,6 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Infolists\Components\TextEntry;
 
 class ProductResource extends Resource
 {
@@ -136,11 +135,11 @@ class ProductResource extends Resource
                     ->boolean()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('initial_price')
-                    ->money()
+                    ->money('IDR')
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('selling_price')
-                    ->money()
+                    ->money('IDR')
                     ->sortable()
                     ->toggleable(),
                 Tables\Columns\TextColumn::make('unit')
