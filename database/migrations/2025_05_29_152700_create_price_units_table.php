@@ -16,8 +16,9 @@ return new class extends Migration
             $table->foreignIdFor(\App\Models\Product::class)->constrained();
             $table->double('price');
             $table->string('unit');
-            $table->integer('min_qty')->default(1);
-            $table->integer('max_qty')->nullable();
+            $table->string('description')->nullable();
+//            $table->integer('min_qty')->default(1);
+//            $table->integer('max_qty')->nullable();
             $table->timestamps();
         });
     }

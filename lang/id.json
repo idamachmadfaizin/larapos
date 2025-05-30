@@ -24,6 +24,7 @@
     "Price": "Harga",
     "Min qty": "Min qty",
     "Max qty": "Max qty",
+    "Description": "Deskripsi",
     "Meter(m), Box(box), Kilogram(kg), Liter(L), or whatever you want": "Meter(m), Box(box), Kilogram(kg), Liter(L), atau apapun",
     "Leave blank if there is no limit": "Kosongkan jika tidak ada batasan",
     "Created at": "Dibuat pada",
