@@ -5,6 +5,7 @@ namespace App\Providers;
 use Filament\Forms\Components\Field;
 use Filament\Infolists\Components\Entry;
 use Filament\Tables\Columns\Column;
+use Illuminate\Support\Number;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Number::useCurrency('IDR');
+        Number::useLocale('id');
         $this->filament();
     }
 
